@@ -1,0 +1,548 @@
+:root {
+    --WroughtIron: #14030b;
+    --CastIron: #15151d;
+    --OiledIron: #282c34;
+    --WroughtIron2: #474749;
+    --PigIron: #484848;
+    --DullIron: #687f8a;
+    --OldIron: #8d9288;
+    --SteelRust: #a25508;
+    --RedIron: #ad3816;
+    --SoftIron: #c3ced1;
+    --PastelIron: #cad6da;
+    --IronRust: #cd7001;
+    --HotIron: #d22905;
+    --TrueIron: #e2dddf;
+    --Iron: #ebecf5;
+    --PureIron: #eeeeee;
+    --CobaltBlue: #0008e3;
+    --BrassPatina: #008f7a;
+    --WroughtIron: #030102;
+    --BlackIron: #060606;
+    --CopperPatina2: #09c0b1;
+    --CastIron: #15151d;
+    --CopperPatina3: #274843;
+    --OiledIron: #282c34;
+    --PigIron: #484848;
+    --CopperPatina: #49f3ac;
+    --Manganese: #4d4d4d;
+    --TungstenCarbide2: #59595f;
+    --OldIron: #5e5e5e;
+    --TarnishedPewter: #676c6b;
+    --AncientBrass: #6b5401;
+    --TungstenCarbide: #767980;
+    --Pewter: #798b93;
+    --Beryllium: #7c7377;
+    --OldGold: #7f5e00;
+    --OldPlatinum: #828f91;
+    --IronRust: #832409;
+    --RomanSilver: #838996;
+    --TarnishedSilver: #848482;
+    --OldTitanium: #878681;
+    --Bronze3: #92791b;
+    --Platinum2: #9a9697;
+    --OldBrass: #9f7b2a;
+    --Brass2: #a38a4e;
+    --Platinum: #a3a0a1;
+    --Brass4: #a5983a;
+    --Vanadium: #a6a6ab;
+    --SilverPatina: #a8a6a6;
+    --OldSilver: #acacac;
+    --Chrome2: #afd5db;
+    --Brass3: #b29438;
+    --Bronze: #b37108;
+    --Brass1: #b3892b;
+    --Platinum3: #b4c5d4;
+    --Tungsten: #b5ac9f;
+    --BrushedCopper: #b77b23;
+    --Copper: #b87333;
+    --Aluminum: #b8c0cb;
+    --Gold3: #b99100;
+    --OldTin: #bebebe;
+    --DullPewter: #bfb9bf;
+    --Nickel: #bfbfbf;
+    --Silver: #c0c0c0;
+    --FoolsGold: #c1a40b;
+    --Chrome: #c2d3d1;
+    --Iron: #c3ced1;
+    --Gold4: #c4ad41;
+    --Bronze2: #c4af19;
+    --Palladium2: #c5cac8;
+    --OldSteel: #c9c0bb;
+    --SterlingSilver: #cad3d4;
+    --AmericanSilver: #cfcfcf;
+    --NewCopper2: #d0906c;
+    --Titanium2: #d1dce5;
+    --Europium: #d2d1b7;
+    --Aluminum2: #d2d9db;
+    --Silver3: #d2e1f6;
+    --Zinc: #d4dadf;
+    --Platinum4: #d5d9d2;
+    --StainlessPlatinum: #dbe0e0;
+    --Palladium: #dde3f7;
+    --Nickel2: #dee0df;
+    --Silver2: #dfded6;
+    --Palladium3: #e1dfd6;
+    --Rhodium: #e2e1df;
+    --Titanium: #e4e4e4;
+    --Zirconium: #e4e7f5;
+    --BrushedAluminum: #e4e9ed;
+    --TruePlatinum: #e5e4e2;
+    --Platinum5: #e5ebea;
+    --StainlessSteel2: #e6e6ee;
+    --StainlessSteel2: #e6e6ee;
+    --RoseGold: #e7bbaa;
+    --Tin: #e7edfe;
+    --Titanium3: #e8edf0;
+    --Gold2: #e9b413;
+    --BrightSilver: #ebeae9;
+    --StainlessSteel: #ebecf5;
+    --Steel: #eeeeee;
+    --NewCopper: #f28e62;
+    --Electrum: #f3c968;
+    --WhiteGold: #f4f5f6;
+    --NewSteel: #f4f5f8;
+    --NordicGold: #fdf286;
+    --Gold: #ffd700;
+    --PolishedGold: #ffd900;
+}
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-margin-top: 20px;
+}
+body {
+    font-size: 20px;
+    color: var(--PureIron);
+    background-color: #222;
+    font-family: 'Raleway', sans-serif;
+}
+a {
+    color: var(--PureIron);
+    color: var(--NewSteel);
+}
+
+/* Nav */
+
+.adjust {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    animation: adjustload .25s ease-in-out 0s forwards;
+    transition: all .25s;
+}
+.adjust:hover {
+    color: var(--WhiteGold);
+    text-shadow: 0 0 5px var(--WhiteGold);
+    transform: scale(1.15);
+}
+@keyframes adjustload {
+    from {
+        opacity: 0;
+        left: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.adjust:hover,
+i:hover {
+    /* color: var(--PigIron); */
+    /* transform: scale(1.1); */
+    /* transition: all 400ms; */
+    /* animation: scalein .1s ease-in-out 0s; */
+    /* text-shadow: 0 0 10px 10px solid white; */
+}
+#navbar {
+    position: fixed;
+    /* position: sticky; */
+    top: 0;
+    width: 100%;
+    font-size: 1.15em;
+    /* background-color: var(--CastIron); */
+    /* border-bottom: .5px solid gold; */
+    background-color: var(--CopperPatina3);
+    border-bottom: .5px solid var(--AmericanSilver);
+    z-index: 9;
+}
+#navbar ul {
+    list-style-type: none;
+    text-align: right;
+    padding-right: 30px;
+    align-items: center;
+}
+#navbar li {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    animation: navload .25s ease-in-out .1s forwards;
+}
+@keyframes navload {
+    from {
+        opacity: 0;
+        margin: -20px;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#navbar a {
+    color: var(--NewSteel);
+    text-decoration: none;
+    /* transition: .25s; */
+}
+#navbar ul li a::before {
+    content: '';
+    /* transition: .25s; */
+    /* transform: scale(.9); */
+}
+#navbar a:hover::before {
+    /* transform: scale(1.1); */
+}
+#navbar a:hover {
+    color: var(--NewSteel);
+    font-weight: 900;
+    animation: navhov .25s ease-in-out 0s forwards;
+    /* color: gold; */
+    /* text-shadow: 0 0 5px gold; */
+}
+@keyframes navhov {
+    from {
+        border-bottom: 0px solid transparent;
+    }
+    to {
+        text-shadow: 0 0 2.5px var(--NewSteel);
+        border-bottom: 2px solid var(--Gold);
+    }
+}
+
+/* Welcome Section */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.3em;
+    /* background: linear-gradient(33deg, var(--PureIron), var(--DullIron)); */
+    /* background: linear-gradient(233deg, var(--CastIron), transparent, var(--WroughtIron)); */
+    /* background: linear-gradient(233deg, var(--WroughtIron), transparent, var(--CastIron)); */
+    background: linear-gradient(233deg, transparent, var(--CastIron), var(--WroughtIron));
+    font-family: 'Russo One', sans-serif;
+}
+#welcome-section p {
+    font-family: 'Raleway', sans-serif;
+    color: var(--Gold);
+}
+
+/* Projects */
+
+#projects {
+    width: 100%;
+    height: 150vh;
+    background-color: var(--AncientBrass);
+}
+#projects h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* 
+.languages ul {
+    padding: 30px;
+    margin-top: 80px;
+    font-size: 4em;
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: 121%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.languages li {
+    list-style: none;
+    margin: 0 15px;
+}
+.languages a {
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: var(--OldBrass);
+
+    /* Cool
+    background: radial-gradient(
+        var(--OldBrass) 1%,
+        transparent 75%,
+        var(--AncientBrass) 80%);
+
+    background: radial-gradient(
+        var(--OldBrass) 1%,
+        var(--OldGold) 35%,
+        var(--AncientBrass) 65%);
+
+    /* Also Cool
+    background: radial-gradient(
+        var(--Gold),
+        var(--OldBrass) 30%,
+        var(--AncientBrass) 65%);
+
+    background: radial-gradient(
+        var(--Bronze2),
+        var(--OldBrass) 30%,
+        var(--AncientBrass) 65%);
+
+    border-radius: 50%;
+    font-size: 30px;
+    color: var(--OiledIron);
+    padding: 10px;
+    transition: .15s;
+}
+.languages a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--OiledIron);
+    transition: .15s;
+    transform: scale(.9);
+    z-index: -2;
+}
+.languages a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--WroughtIron);
+}
+.languages a:hover {
+    color: var(--WroughtIron);
+    box-shadow: 0 0 5px var(--WroughtIron);
+    text-shadow: 0 0 .5px var(--WroughtIron);
+}
+.languages li::after {
+    content: 'Hi';
+    font-size: .25em;
+}
+*/
+
+
+.projects {
+    display: grid;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30vh;
+    margin: 20px auto;
+    background-color:#474749;
+    border: 1px solid green;
+}
+
+
+
+
+
+
+
+
+
+/* Profile Links */
+
+#profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85vh;
+    background: radial-gradient(circle,
+        transparent 20%,
+        var(--CastIron),
+        var(--WroughtIron) 70%,
+        var(--BlackIron));
+    
+    background: radial-gradient(circle,
+        transparent 10%,
+        var(--Tungsten) 50%,
+        /* transparent, */
+        var(--TungstenCarbide),
+        /* transparent, */
+        var(--WroughtIron2));
+    
+    background: radial-gradient(
+        closest-corner at -444% 56%,
+        transparent 10%,
+        var(--TungstenCarbide) 50%,
+        transparent,
+        var(--WroughtIron2),
+        /* transparent, */
+        var(--PigIron),
+        transparent,
+        var(--WroughtIron2),
+        /* var(--TungstenCarbide), */
+        transparent,
+        var(--WroughtIron),
+        transparent,
+        /* var(--TungstenCarbide), */
+        var(--TungstenCarbide2),
+        var(--TungstenCarbide),
+        var(--WroughtIron));
+}
+#profile-link h2 {
+    font-size: 2.5em;
+}
+#profile-link p {
+    font-family: 'Raleway', sans-serif;
+    color: var(--OldSilver);
+}
+.social ul {
+    padding: 30px;
+    margin-top: 80px;
+    font-size: 4em;
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    /* top: 121%; */
+    /* top: 40%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.social li {
+    list-style: none;
+    margin: 0 15px;
+}
+.social a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: var(--OldBrass);
+
+    /* Cool */
+    background: radial-gradient(
+        var(--OldBrass) 1%,
+        transparent 75%,
+        var(--AncientBrass) 80%);
+
+    /* background: radial-gradient(
+        var(--OldBrass) 1%,
+        var(--OldGold) 35%,
+        var(--AncientBrass) 65%); */
+
+    /* Also Cool */
+    background: radial-gradient(
+        var(--Gold),
+        var(--OldBrass) 30%,
+        var(--AncientBrass) 65%);
+
+    background: radial-gradient(
+        var(--Bronze2),
+        var(--OldBrass) 30%,
+        var(--AncientBrass) 65%);
+
+    background: var(--OiledIron);
+    background: #333;
+    /* border: 1px solid var(--BrightSilver); */
+    border-radius: 50%;
+    font-size: 30px;
+    color: var(--Tungsten);
+    color: var(--DullPewter);
+    color: #666;
+    /* padding: 10px; */
+    transition: .15s;
+}
+.social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--BrightSilver);
+    transition: .15s;
+    transform: scale(.9);
+    z-index: -2;
+}
+.social a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--BrightSilver);
+}
+.social a:hover {
+    color: var(--BrightSilver);
+    box-shadow: 0 0 5px var(--BrightSilver);
+    text-shadow: 0 0 .5px var(--BrightSilver);
+}
+.social::after {
+    /* content: 'Email'; */
+}
+
+
+
+/* Footer */
+
+footer {
+    height: 5vh;
+}
+footer {
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    min-height: 10vh;
+    padding-top: 15px;
+    z-index: 1;
+    border: .5px solid var(--pigiron);
+    border-bottom: none;
+    color: var(--copper);
+    background-color: var(--footerbg);
+}
+footer a {
+    color: var(--link);
+}
+footer a:hover {
+    text-shadow: 0 0 2.5px var(--NewSteel);
+}
+#fcc-logo {
+    width: 175px;
+    /* background-color: var(--bg2); */
+    aspect-ratio: 35 / 4;
+    display: inline-block;
+    /* margin: 10px auto; */
+    padding: .75rem;
+    /* box-shadow: 0 0 10px 2px #808080aa; */
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
