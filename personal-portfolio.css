@@ -149,22 +149,12 @@ a {
         opacity: 1;
     }
 }
-.adjust:hover,
-i:hover {
-    /* color: var(--PigIron); */
-    /* transform: scale(1.1); */
-    /* transition: all 400ms; */
-    /* animation: scalein .1s ease-in-out 0s; */
-    /* text-shadow: 0 0 10px 10px solid white; */
-}
+
 #navbar {
     position: fixed;
-    /* position: sticky; */
     top: 0;
     width: 100%;
     font-size: 1.15em;
-    /* background-color: var(--CastIron); */
-    /* border-bottom: .5px solid gold; */
     background-color: var(--CopperPatina3);
     border-bottom: .5px solid var(--AmericanSilver);
     z-index: 9;
@@ -193,22 +183,14 @@ i:hover {
 #navbar a {
     color: var(--NewSteel);
     text-decoration: none;
-    /* transition: .25s; */
 }
 #navbar ul li a::before {
     content: '';
-    /* transition: .25s; */
-    /* transform: scale(.9); */
-}
-#navbar a:hover::before {
-    /* transform: scale(1.1); */
 }
 #navbar a:hover {
     color: var(--NewSteel);
     font-weight: 900;
     animation: navhov .25s ease-in-out 0s forwards;
-    /* color: gold; */
-    /* text-shadow: 0 0 5px gold; */
 }
 @keyframes navhov {
     from {
@@ -226,6 +208,7 @@ i:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 575px;
 }
 #welcome-section {
     display: flex;
@@ -236,9 +219,6 @@ i:hover {
     text-align: center;
     justify-content: center;
     font-size: 1.3em;
-    /* background: linear-gradient(33deg, var(--PureIron), var(--DullIron)); */
-    /* background: linear-gradient(233deg, var(--CastIron), transparent, var(--WroughtIron)); */
-    /* background: linear-gradient(233deg, var(--WroughtIron), transparent, var(--CastIron)); */
     background: linear-gradient(233deg, transparent, var(--CastIron), var(--WroughtIron));
     font-family: 'Russo One', sans-serif;
 }
@@ -247,58 +227,87 @@ i:hover {
     color: var(--Gold);
 }
 
+
+
+
 /* Projects */
 
 #projects {
     width: 100%;
-    height: 150vh;
+    height: 190vh;
+    padding-top: 40px;
     background-color: var(--AncientBrass);
+    background-color: var(--Gold3);
+    background: linear-gradient(
+        133deg,
+        red,
+        blue 66%);
+    text-shadow: 0 0 8px black;
 }
 #projects h2 {
-    margin-top: 50px;
+    margin: 25px;
     text-align: center;
     font-size: 2em;
     font-family: 'Raleway', sans-serif;
 }
 
-/* 
-.languages ul {
-    padding: 30px;
-    margin-top: 80px;
-    font-size: 4em;
+
+/* Skills */
+
+#skills i {
+    font-size: 2em;
+    /* width: 60px; */
+    /* height: 60px; */
+    color: var(--Rhodium);
+    color: var(--PigIron);
+    color: var(--CopperPatina3);
+    color: var(--Manganese);
+    /* text-shadow: 0 0 15px var(--Silver); */
+    filter: blur(.6px);
+    filter: blur(1.5px);
+    transition: all .2s;
+}
+#skills i:hover {
+    color: transparent;
+    transform: scale(1.075);
+    filter: blur(0);
+    text-shadow: 0 0 .5px var(--Gold);
+    text-shadow: 0 0 0 var(--Gold);
+}
+/* #skills i:hover {
+    color: transparent;
+    box-shadow: 0 0 5px var(--Gold);
+    text-shadow: 0 0 .5px var(--Gold);
+} */
+#skills ul {
+    margin-top: 60px;
+    font-size: 1.75em;
     text-align: center;
     display: inline-flex;
     position: relative;
-    top: 121%;
-    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.languages li {
+#skills li {
     list-style: none;
-    margin: 0 15px;
+    margin: 0 40px;
 }
-.languages a {
+#skills a {
     position: relative;
     display: block;
-    width: 90px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     text-align: center;
-    line-height: 63px;
+    line-height: 123px;
     background: var(--OldBrass);
 
-    /* Cool
+    /* Cool */
     background: radial-gradient(
         var(--OldBrass) 1%,
         transparent 75%,
         var(--AncientBrass) 80%);
 
-    background: radial-gradient(
-        var(--OldBrass) 1%,
-        var(--OldGold) 35%,
-        var(--AncientBrass) 65%);
-
-    /* Also Cool
+    /* Also Cool */
     background: radial-gradient(
         var(--Gold),
         var(--OldBrass) 30%,
@@ -309,13 +318,19 @@ i:hover {
         var(--OldBrass) 30%,
         var(--AncientBrass) 65%);
 
+    background: var(--OiledIron);
+    background: #333;
+    /* background: transparent; */
     border-radius: 50%;
     font-size: 30px;
-    color: var(--OiledIron);
-    padding: 10px;
+    /* color: var(--Tungsten); */
+    /* color: var(--DullPewter); */
+    color: #666;
+    /* color: linear-gradient(90deg,red,blue); */
     transition: .15s;
 }
-.languages a::before {
+
+#skills a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -323,25 +338,26 @@ i:hover {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: var(--OiledIron);
+    background: var(--Gold);
+    background: transparent;
     transition: .15s;
     transform: scale(.9);
     z-index: -2;
 }
-.languages a:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px var(--WroughtIron);
+#skills a:hover::before {
+    transform: scale(1.15);
+    background: var(--Gold);
+    box-shadow: 0 0 15px var(--Gold);
 }
-.languages a:hover {
-    color: var(--WroughtIron);
-    box-shadow: 0 0 5px var(--WroughtIron);
-    text-shadow: 0 0 .5px var(--WroughtIron);
+
+#skills a:hover {
+    color: transparent;
+    box-shadow: 0 0 5px var(--Gold);
+    text-shadow: 0 0 .5px var(--Gold);
 }
-.languages li::after {
-    content: 'Hi';
-    font-size: .25em;
+#skills a::before:hover {
+    color: green;
 }
-*/
 
 
 .projects {
@@ -350,27 +366,102 @@ i:hover {
     width: 80%;
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
 }
-
-
-
 .project-tile {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    height: 30vh;
+    height: 44vh;
     margin: 20px auto;
+    padding: 20px auto;
+    margin-bottom: 20px;
     background-color:#474749;
-    border: 1px solid green;
+    background-color:transparent;
+    font-family: 'Russo One', sans-serif;
+}
+.project-tile a {
+    display: block;
+    height: 100%;
+    outline: 1px solid silver;
+    box-shadow: 4px 4px 15px var(--CastIron);
+    transition: background 5s,
+                scale 1s,
+                transform .5s,
+                box-shadow .5s;
+}
+.project-tile a:hover {
+    transform: translate(-1.5px, -1.5px)
+               scale(1.01);
+    outline: 2px solid var(--Silver2);
+    box-shadow: 6px 6px 20px var(--BlackIron);
 }
 
 
-
-
-
-
-
+#port-scanner {
+    background: url(images/port-scanner-py.png) top left / 100vh;
+}
+.project-tile:nth-child(1)::after {
+    content: 'Port Scanner.py';
+    margin: 12px;
+}
+#prod-landing {
+    background: url(images/product-landing-page.png) center / 80vh;
+}
+.project-tile:nth-child(2)::after {
+    content: 'Product Landing Page';
+    margin: 12px;
+}
+#tribute {
+    background: url(images/tribute.png) top center / auto;
+}
+.project-tile:nth-child(3)::after {
+    content: 'Tribute Page';
+    margin: 12px;
+}
+#numerology {
+    background: url(images/numerology-py.png) top left / 100vh;
+}
+.project-tile:nth-child(4)::after {
+    content: 'Numerology Script.py';
+    margin: 12px;
+}
+#secrets {
+    background: url(images/secrets-passgen.png) top left / 100vh;
+}
+.project-tile:nth-child(5)::after {
+    content: 'Secrets Password Generator.py';
+    margin: 12px;
+}
+#form {
+    background: url(images/form.png) top center / 100vh;
+}
+.project-tile:nth-child(6)::after {
+    content: 'Survey Form';
+    margin: 12px;
+}
+#qr {
+    background: url(images/frontendmentor-qr-code.jpg) center / 100vh;
+}
+.project-tile:nth-child(7)::after {
+    content: 'FrontEndMentor.io QR Code';
+    margin: 12px;
+}
+#job-cost {
+    background: url(images/job-costing.png) top left / 100vh;
+}
+.project-tile:nth-child(8)::after {
+    content: 'Job Costing Script.py';
+    margin: 12px;
+}
+#base64 {
+    background: url(images/base64-decoder.png) top left / 100vh;
+}
+.project-tile:nth-child(9)::after {
+    content: 'Base64 Decoder.py';
+    margin: 12px;
+}
 
 
 /* Profile Links */
@@ -391,9 +482,7 @@ i:hover {
     background: radial-gradient(circle,
         transparent 10%,
         var(--Tungsten) 50%,
-        /* transparent, */
         var(--TungstenCarbide),
-        /* transparent, */
         var(--WroughtIron2));
     
     background: radial-gradient(
@@ -402,15 +491,12 @@ i:hover {
         var(--TungstenCarbide) 50%,
         transparent,
         var(--WroughtIron2),
-        /* transparent, */
         var(--PigIron),
         transparent,
         var(--WroughtIron2),
-        /* var(--TungstenCarbide), */
         transparent,
         var(--WroughtIron),
         transparent,
-        /* var(--TungstenCarbide), */
         var(--TungstenCarbide2),
         var(--TungstenCarbide),
         var(--WroughtIron));
@@ -418,9 +504,27 @@ i:hover {
 #profile-link h2 {
     font-size: 2.5em;
 }
+#profile-link h3 {
+    font-size: 1.66em;
+    margin-bottom: 25px;
+    color: var(--Gold);
+}
 #profile-link p {
     font-family: 'Raleway', sans-serif;
     color: var(--OldSilver);
+}
+#resume {
+    font-size: 1.5em;
+    color: var(--OldSilver);
+    text-align: center;
+}
+#resume a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+#resume a:hover {
+    animation: navhov .25s ease-in-out 0s forwards;
+    text-shadow: 0 0 10px var(--Gold);
 }
 .social ul {
     padding: 30px;
@@ -429,8 +533,6 @@ i:hover {
     text-align: center;
     display: inline-flex;
     position: relative;
-    /* top: 121%; */
-    /* top: 40%; */
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -453,11 +555,6 @@ i:hover {
         transparent 75%,
         var(--AncientBrass) 80%);
 
-    /* background: radial-gradient(
-        var(--OldBrass) 1%,
-        var(--OldGold) 35%,
-        var(--AncientBrass) 65%); */
-
     /* Also Cool */
     background: radial-gradient(
         var(--Gold),
@@ -471,13 +568,11 @@ i:hover {
 
     background: var(--OiledIron);
     background: #333;
-    /* border: 1px solid var(--BrightSilver); */
     border-radius: 50%;
     font-size: 30px;
     color: var(--Tungsten);
     color: var(--DullPewter);
     color: #666;
-    /* padding: 10px; */
     transition: .15s;
 }
 .social a::before {
@@ -502,10 +597,6 @@ i:hover {
     box-shadow: 0 0 5px var(--BrightSilver);
     text-shadow: 0 0 .5px var(--BrightSilver);
 }
-.social::after {
-    /* content: 'Email'; */
-}
-
 
 
 /* Footer */
@@ -532,17 +623,55 @@ footer a:hover {
     text-shadow: 0 0 2.5px var(--NewSteel);
 }
 #fcc-logo {
-    width: 175px;
-    /* background-color: var(--bg2); */
+    width: 200px;
     aspect-ratio: 35 / 4;
     display: inline-block;
-    /* margin: 10px auto; */
     padding: .75rem;
-    /* box-shadow: 0 0 10px 2px #808080aa; */
 }
 
 @media (max-width: 1200px) {
     .container {
         width: 100%;
+    }
+}
+@media (max-width: 1100px) {
+    #skills ul {
+        /* grid-template-columns: 1fr 1fr 1fr; */
+    }
+    #skills i {
+        font-size: 1.8em;
+    }
+    #skills li {
+        margin: 0 20px;
+    }    
+    #projects {
+        height: 285vh;
+    }
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 900px) {
+    #profile-link h3 {
+        font-size: 1.4em;
+    }
+}
+@media (max-width: 750px) {
+    #skills i {
+        font-size: 1.4em;
+    }
+    #projects {
+        height: 480vh;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    #profile-link h3 {
+        font-size: 1.25em;
+    }
+}
+@media (max-width: 600px) {
+    #profile-link h3 {
+        font-size: 1em;
     }
 }
