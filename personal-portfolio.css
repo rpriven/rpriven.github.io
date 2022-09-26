@@ -411,11 +411,11 @@ a {
     content: 'Port Scanner.py';
     margin: 12px;
 }
-#prod-landing {
-    background: url(images/product-landing-page.png) center / 80vh;
+#python-technical-documentation {
+    background: url(images/technical-documentation.png) center / 80vh;
 }
 .project-tile:nth-child(2)::after {
-    content: 'Product Landing Page';
+    content: 'Introduction to Python';
     margin: 12px;
 }
 #tribute {
