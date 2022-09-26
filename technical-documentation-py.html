@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation - Intro to Python</title>
+    <link rel="stylesheet" href="technical-documentation-py.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <nav id="navbar">
+            <header id="navheader"><h2>Python3</h2></header>
+            <ul>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#what_you_should_already_know" class="nav-link">What You Should Already Know</a></li>
+                <li><a href="#installation" class="nav-link">Installation</a></li>
+                <li><a href="#hello_world" class="nav-link">Hello World</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+                <li><a href="#variables" class="nav-link">Variables</a></li>
+                <li><a href="#expressions" class="nav-link">Expressions</a></li>
+                <li><a href="#conditional_statements" class="nav-link">Conditional Statements</a></li>
+                <li><a href="#loops" class="nav-link">Loops</a></li>
+                <li><a href="#strings" class="nav-link">Strings</a></li>
+                <li><a href="#lists" class="nav-link">Lists</a></li>
+                <li><a href="#dictionaries" class="nav-link">Dictionaries</a></li>
+                <li><a href="#functions" class="nav-link">Functions</a></li>
+                <li><a href="#reference" class="nav-link">Reference</a></li>
+            </ul>
+        </nav>
+            
+        <main id="main-doc">
+
+            <header id="title">
+                <img id="py1" src="https://i.pinimg.com/originals/8f/43/15/8f4315f2e1c3aaa32dde5dec2341ed94.png" alt="python logo">
+                <h1>Introduction to Python</h1>
+                <img id="py2" src="https://i.pinimg.com/originals/8f/43/15/8f4315f2e1c3aaa32dde5dec2341ed94.png" alt="python logo">
+            </header>
+            <section id="introduction" class="main-section">
+                <header><h2>Introduction</h2></header>
+                <p>Python is an excellent first programming language as it is fun and easy to learn, yet powerful. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+                <p>With Python you can do many useful things such as data processing, building mobile apps, gaming, navigation, AI, web crawling, automation, database management and more.</p>
+                <p>This quick intro to Python doesn't begin to touch the surface and if you are interested in learning more, there is so much more you can do with this beautiful language and I suggest you research further on how to create the program(s) you envision.</p>
+            </section>
+
+            <section id="what_you_should_already_know" class="main-section">
+                <header><h2>What You Should Already Know</h2></header>
+                <p>There are no requirements in order to learn Python, however there are a few skills which will be helpful:</p>
+                <ul>
+                    <li>Basic computer knowledge. You should be able to install programs, be familiar with keyboard shortcuts and be able to troubleshoot.</li>
+                    <li>CLI or Linux experience. Depending on your operating system, you may need to know how change permissions and/or file extensions in order to run the programs.</li>
+                    <li>Any programming experience. If you are new to programming and need help, try one of the <a href="#reference">links</a> below.</li>
+                </ul>
+            </section>
+
+            <section id="installation" class="main-section">
+                <header><h2>Installation</h2></header>
+                <p>Installing Python is generally easy, and nowadays many Linux and UNIX distributions include a recent Python. Even some Windows computers now come with Python already installed. If you are using Windows, look for Python3 in the Microsoft Store and install it there if you don't have it already.</p>
+                <p>For simplicity, you can open Python in cmd, PowerShell or bash by typing either:</p>
+                <code>
+                    python<br>
+                    python3
+                </code>
+                <p>If Python is not installed it will either open up the Microsoft Store for you (Windows) or tell you how to install it (Linux).</p>
+                <p>If you are using Linux, it is most likely pre-installed. To make sure it is and to check the version that is installed, go to the terminal and type:</p>
+                <code class="linux">
+                    python3 --version
+                </code>
+                <p>It should tell you the version number.  If it is not installed, it will tell you how. Do so by typing:</p>
+                <code class="linux">
+                    sudo apt install python3
+                </code>
+                <p>You will also need to install a code editor. One of the major benefits of a code editor is syntax highlighting. It detects which language your script is in (based on the type of file extension used) and makes everything color coded. If you already have one feel free to skip to the next section. There are subtle differences depending on your preferences, however the most popular choices are:
+                </p>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a></li>
+                    <li><a href="https://atom.io/" target="_blank">Atom</a></li>
+                </ul>
+                <p>There are extensions you can install to run Python programs directly in the editors, which makes it easier to setup and debug. There is plenty of info about doing that around the web.</p>
+            </section>
+
+            <section id="hello_world" class="main-section">
+                <header><h2>Hello World</h2></header>
+                <p>Whether you're new, or familiar with any kind of programming, here is typically the first lesson in any programming language, your first script, 'Hello World'.  This is the most basic use of programming, printing text on the screen.  This is where we start.</p>
+                <p>To get started with writing Python, open a new file in your editor of choice or just a new text document will work and write your first "Hello world" Python script:</p>
+                <code>
+                    print('Hello World!')
+                </code>
+                <p>Save the script as 'hello_world.py' and run it in your chosen editor or double click it if you are using Windows and it will run.</p>
+                <p>If you are using Linux, make sure you add this to the beginning of your script in order for it to run:</p>
+                <code>
+                    #!/usr/bin/python3
+                </code>
+                <p>Also make sure you give the file permission to execute:</p>
+                <code class="linux">
+                    chmod +x hello_world.py
+                </code>
+                <p>Then you can run the script by typing:</p>
+                <code class="linux">
+                    ./hello_world.py
+                </code>
+                <p>or</p>
+                <code class="linux">
+                    python3 hello_world.py
+                </code>
+            </section>
+
+            <section id="comments" class="main-section">
+                <header><h2>Comments</h2></header>
+                <p>As you progress, you might also want to add a comment to your script, which won't run as part of the program. Comments can contain information such as your name or contact info, version number, keeping your code organized by sections, various ways of doing the same thing, etc. Comments start with a (#) hashtag:</p>
+                <code># This is a comment</code>
+                <p>Once you begin to write more detailed code, you might need to remind yourself of what you're doing or explain certain lines of code to someone else. You can comment multiple lines of code with three single quotes (''') before and after the code you want to ignore:</p>
+                <code>'''<br>
+                    This is<br>
+                    a multi-line<br>
+                    Comment<br>
+                    '''
+                </code>
+                <p>Usually it is good practice to delete code that is no good but sometimes if you are still testing and trying out different ways of doing something, it can be useful to keep it around and just temporarily comment it until you decide which part of the code you want to keep.</p>
+            </section>
+
+            <section id="variables" class="main-section">
+                <header><h2>Variables</h2></header>
+                <p>Variables are essentially placeholders for data stored in memory and you can assign various values to make it easier for reference in your script.</p>
+                <p>Variables can hold strings, integers or floats:</p>
+                <code># This is a string<br>
+                    x = 'This is a string.'<br><br>
+                    # This is an integer<br>
+                    x = 11<br><br>
+                    # This is a float<br>
+                    x = 4.0
+                </code>
+                <p>Our basic 'Hello World' script can be modified using a variable like so:</p>
+                <code>x = 'Hello World!'<br>
+                print(x)</code>
+                <p>You will see the same "Hello World!" print out on your screen when you run this.</p>
+                <p>You can also define multiple variables to the same value:</p>
+                <code>
+                    x = y = z = 5<br>
+                    # x equals 5, so do y and z
+                </code>
+                <p>Or you can set multiple variables to multiple values:</p>
+                <code>
+                    x, y, z = 5, 4.44, 'hello'<br><br>
+                    print(x) # prints 5<br>
+                    print(y) # prints 4.44<br>
+                    print(z) # prints 'hello'
+                </code>
+            </section>
+
+            <section id="expressions" class="main-section">
+                <header><h2>Expressions</h2></header>
+                <p>There are various types of operators which have many different expressions. Math is very simple in Python. As you would expect it works like this:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Operator</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Addition</td>
+                        <td>+</td>
+                        <td>Adds values on either side of the operator.</td>
+                    </tr>
+                    <tr>
+                        <td>Subtraction</td>
+                        <td>-</td>
+                        <td>Subtracts right hand operand from left hand operand.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplication</td>
+                        <td>*</td>
+                        <td>Multiplies values on either side of the operator.</td>
+                    </tr>
+                    <tr>
+                        <td>Divison</td>
+                        <td>/</td>
+                        <td>Divides left hand operand by right hand operand.</td>
+                    </tr>
+                    <tr>
+                        <td>Exponent</td>
+                        <td>**</td>
+                        <td>Performs exponential (power) calculation on operators.</td>
+                    </tr>
+                    <tr>
+                        <td>Modulus</td>
+                        <td>%</td>
+                        <td>Divides left hand operand by right hand operand and returns remainder.</td>
+                    </tr>
+                    <tr>
+                        <td>Floor Division</td>
+                        <td>//</td>
+                        <td>The division of operands where the result is the quotient in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero (towards negative infinity).</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <code>
+                    2 + 2 # equals 4<br>
+                    4 - 2 # equals 2<br>
+                    5 * 5 # equals 25<br>
+                    9 / 3 # equals 3.0<br>
+                    10 ** 5 # equals 100000<br>
+                    20 % 6 # equals 2<br>
+
+                    9//2 = 4 and 9.0//2.0 = 4.0, -11//3 = -4, -11.0//3 = -4.0
+                </code>
+                <p>A nice feature of Python is you can even add strings together:</p>
+                <code>
+                    sleep = 'z'<br>
+                    sleeping = sleep + sleep + sleep<br><br>
+                    print(sleeping)<br><br>
+                    # prints out 'zzz'
+                </code>
+                <p>You will also need to know about Comparison (also known as Relational) Operators:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Operator</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Is Equal to</td>
+                        <td>==</td>
+                        <td>If the values of two operands are equal, then the condition becomes true.</td>
+                    </tr>
+                    <tr>
+                        <td>Not Equal to</td>
+                        <td>!=</td>
+                        <td>If values of two operands are not equal, then condition becomes true.</td>
+                    </tr>
+                    <tr>
+                        <td>Greater Than</td>
+                        <td>></td>
+                        <td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
+                    </tr>
+                    <tr>
+                        <td>Less Than</td>
+                        <td><</td>
+                        <td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>
+                    </tr>
+                    <tr>
+                        <td>Greater Than or Equal to</td>
+                        <td>>=</td>
+                        <td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
+                    </tr>
+                    <tr>
+                        <td>Less Than or Equal to</td>
+                        <td><=</td>
+                        <td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <p>There are many other operators in Python besides Arithmetic and Comparison operators which will not be covered in this introduction.  To read more about them, go <a href="https://www.tutorialspoint.com/python/python_basic_operators.htm" target="_blank">here</a>.</p>
+            </section>
+
+            <section id="conditional_statements" class="main-section">
+                <header><h2>Conditional Statements</h2></header>
+                <p>Conditional statements can be any expression that evaluates to true or false. Use the if statement to execute lines of code only if a logical condition is true. This is where the comparison or relational operators a very useful.  Use else to execute a statement if the condition is false. An if statement works like this:</p>
+                <pre><code>a = 5<br>
+if a == 5:
+    print(a) <br>
+else:
+    print('a is not equal to 5')</pre></code>
+                <p>If the first statement is true, the code will execute, else it will execute a different line of code. These are also known as Boolean expressions. Notice the indentation after both the 'if' and the 'else', this is very important in Python otherwise it will cause a syntax error if there is improper indentation. Also notice that there is a colon (:) after both the if and else, again this will cause a syntax error if left unwritten.</p>
+                <p>You may also nest if statements within another if statement in order to test multiple conditions:
+                <pre><code>a = 11<br>
+if a > 5:
+    print('a is greater than 5')
+if a < 25:
+    print('a is less than 25')
+else:
+    print('a is less than 5')</pre></code>
+                <ul>
+                    <li class="quiz">Quiz: In the example above, if the 'else' statement prints, what is missing in the print statement?</li>
+                    <li class="hint">Hint: What value could <strong>'a'</strong> also be equal to in order for the else statement to run? (See below if you need help.)</li>
+                </ul>
+                <p>Another way to test for relations is in the same line using the AND or OR statement:</p>
+                <ul>
+                    <li>AND: Executes if both statements are true.</li>
+                    <li>OR: Executes if either statement is true.</li>
+                </ul>
+                <code><pre>a = 11
+if a > 5 and a < 25:
+    print('a is greater than 5 and less than 25')
+else:
+    print('a is less than or equal to 5')</pre></code>
+                <p>The code above will only execute if both evaluations result to true. If either one of them is false the first line of code will not get executed and instead run the code in the else statement.</p>
+                <p>Using the OR statement, if either one of the statements is true it will go through:</p>
+                <pre><code>a = 11
+if a < 3 or a > 9:
+    print('a is either less than 3 or greater than 9')
+else:
+    print('a is between 3 and 9')</pre></code>
+                <p>The statements will test for true or false from left to right in the order they are written. Notice how the first comparison statement is false but since we used an OR relational operator, it went on to evaluate the second expression (a > 9) which is true, therefore the result of the entire expression using the OR statement is true.</p>
+            </section>
+
+            <section id="loops" class="main-section">
+                <header><h2>Loops</h2></header>
+                <p>There are two types of loops in Python:</p>
+                <ul>
+                    <li>For Loops: execute a certain amount depending on the conditions</li>
+                    <li>While Loops: execute as long as the conditions are met</li>
+                </ul>
+                <p>For loops are excellent for looping through a list (which we will learn about next). For now, just take a look at this code and you will understand it more moving forward:</p>
+                <pre><code>x = 0
+print('Before', x)
+for number in [1, 19, 5, 15]:
+    x = x + number
+    print(x, number)
+print('After', x)</pre></code>
+                <p>Explanation: For each number in the list [1, 19, 5, 15], add the number to x and print them both out.</p>
+                <p>This will execute and print out like so:</p>
+                <ul>
+                    <li>Before 0</li>
+                    <li>1 1</li>
+                    <li>20 19</li>
+                    <li>25 5</li>
+                    <li>40 15</li>
+                    <li>After 40</li>
+                </ul>
+
+                <p>While loops are great because they allow you to 'loop through' (execute) the same code over and over as long as the condition you specify is true:</p>
+                <pre><code>a = 1<br>
+while a <= 10:
+    print(a)
+    a += 1</pre></code>
+                <p>With each iteration (loop), the loop prints the value of a on a new line, until a becomes greater than 10.</p>
+                <ul>
+                    <li>The first pass: a = 1 </li>
+                    <li>The second pass: a = 2 </li>
+                    <li>The tenth pass: a = 10</li>
+                    <li>At the end of the tenth pass, a becomes 11, therefore the statement is no longer true and the while loop exits.</li>
+                </ul>
+                <p>Be careful with while loops because you can create an infinite loop which will keep running forever. This is why we have the [a = a + 1] statement at the end, so eventually a will be false and the loop will stop.</p>
+                <p>If you find yourself in an infinite loop situation, you can usually end the program by hitting CTRL + C or CTRL + Z. If that doesn't work you will need to close the terminal or whatever program you are running it in. ALT + F4 is the keyboard shortcut to close the current open window.</p>
+                <p>If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
+            </section>
+
+            <section id="strings" class="main-section">
+                <header><h2>Strings</h2></header>
+                <p>Strings are usually anything that is not a number and they are within quotes ' ' or " ". We have already used strings in previous examples, such as 'Hello World!'.</p>
+                <p>One of the most common ways you will use strings in writing your own interactive programs is taking user input and doing something with it:</p>
+                <code>
+                    user_name = input('Enter your name: ')<br>
+                    print('Hello', user_name)
+                </code>
+                <p>This code asks the user to enter their name and assigns it to user_name and says 'Hello' to them. The comma in the print statement automatically adds a space for you. Again, input() is a great way to make your scripts and programs interactive.</p>
+
+                <p>You can alter or manipulate strings in the following way:</p>
+                <ul>
+                    <li>Loop through them</li>
+                    <li>Count their letters</li>
+                    <li>Slice them up</li>
+                    <li>Add them together (concatenate)</li>
+                    <li>Other manipulations</li>
+                </ul>
+                <p>If you want to see how long the string is you can do this:</p>
+                <code>
+                    fruit = watermelon<br>
+                    x = len(fruit)<br>
+                    print(x)<br><br>
+                    # or<br><br>
+                    print(len(fruit))
+                </code>
+                <p>Let's say you wanted to loop through a string and output each letter on a new line:</p>
+                <pre><code>fruit = 'watermelon'
+for letter in fruit:
+    print(letter)</code></pre>
+                <p>You can make strings uppercase or lowercase by doing this:</p>
+                <code>
+                    print(fruit.upper())<br>
+                    # WATERMELON<br><br>
+                
+                    # or<br><br>
+
+                    print('MAKE ME LOWERCASE'.lower())<br>
+                    # make me lowercase
+                </code>
+
+                <p>You will learn more about manipulation in the following sections, but keep in mind Python is much more powerful than just manipulating numbers or printing things out.</p>
+            </section>
+
+            <section id="lists" class="main-section">
+                <header><h2>Lists</h2></header>
+                <p>Lists are a very common and useful thing in Python, as there is a lot you can do with lists.  We already used a list in one of the previous examples to loop through some numbers.</p>
+                <p>A list is just a list of strings, ints or floats which are contained in one list variable. You can manipulate the list in many different ways:</p>
+                <ul>
+                    <li>Print the entire list</li>
+                    <li>Print certain parts of the list</li>
+                    <li>Add or remove items from the list</li>
+                    <li>Find the length of the list</li>
+                    <li>Add the numbers in a list together</li>
+                    <li>Combine lists together</li>
+                    <li>Slice lists apart</li>
+                    <li>Search for something in lists</li>
+                </ul>
+                <p>Here are a couple examples:</p>
+                <code>
+                    # defines a blank list<br>
+                    my_list = ()<br><br>
+
+                    # defines a list<br>
+                    my_list = [11, 22, 33, 44, 55]<br><br>
+
+                    # prints the entire list<br>
+                    print(my_list)<br><br>
+
+                    # prints first number in list<br>
+                    print(my_list[0])<br><br>
+
+                    # also prints the first number in the list [:1] means up to but not including 1<br>
+                    print(my_list[:1])<br><br>
+
+                    # adds to the end of the list<br>
+                    my_list.append(66)<br><br>
+
+                    # adds the numbers in the list together<br>
+                    print(sum(my_list))<br><br>
+
+                    # prints the length of the lists<br>
+                    print(len(my_list))<br><br>
+
+                    # sorts the list<br>
+                    print(my_list.sort())
+                </code>
+                <p>Notice that list indices start at 0.  Therefore 1 is second in the list, 0 is first. This is important to remember.</p>
+                <p>Keep in mind you can also slice strings in this same way.</p>
+                <p>Lists can also contain strings or a combination of strings, int or float:</p>
+                <code>
+                    names = ['John', 'Rob', 'James']<br><br>
+
+                    # prints last item<br>
+                    print(names[2])<br><br>
+
+                    # append list<br>
+                    names.append('Apple')<br>
+                    names.append(3)<br>
+                    names.append(4.5)<br><br>
+
+                    # print selected parts of the list (just the strings in this case)
+                    print(names[0:3])<br><br>
+
+                    # sorting only works with one type (strings or integers)<br>
+                    # so you would need to remove the last two items which are not strings<br>
+                    names.pop()<br><br>
+
+                    # pop only removes the last item in the list, or you can specify the index<br>
+                    names.pop(4)<br><br>
+
+                    # now you can sort the list alphabetically<br>
+                    names.sort()
+                </code>
+                <p>As one of the previous examples showed, you could use a list in a for loop going through each item and do something, or you could also process some data, and add the result to the end of that list and append it. From there you could add them together, average them, etc.</p>
+                <p>There are a lot of other things you can do with lists, see the functions section for more info.</p>
+
+            </section>
+
+            <section id="dictionaries" class="main-section">
+                <header><h2>Dictionaries</h2></header>
+                <p>Dictionaries are similar to lists in that they store 'lists' of data. This data can also be referenced a variety of ways, very similar to lists.</p>
+                <p>The main difference is that Lists are 'numbered' while Dictionaries are 'named'. Dictionaries:</p>
+                <ul>
+                    <li>Have a 'key : value' pair</li>
+                    <li>Can be referenced or sorted by either their key (name) or value.</li>
+                </ul>
+                <p>Creating a dictionary is simple:</p>
+                <code>
+                    # definite it before you start adding things to it<br>
+                    my_dict = ()<br>
+                    my_dict['name'] = 'Jack'<br>
+                    my_dict['age'] = 21<br>
+                    my_dict['country'] = 'US'<br><br>
+
+                    print(my_dict)<br>
+                    # {'name' : 'Jack', 'age' : 21, 'country' : 'US'}<br><br>
+
+                    # or you could define it all at once<br>
+                    my_dict = { 'name' : 'Jack', 'age' : 21, 'country' : 'US' }<br><br>
+
+                    # prints a list of just the keys (names)<br>
+                    print(my_dict.keys())<br>
+                    # ['name', 'age', 'country']<br><br>
+
+                    # prints a list of just the values<br>
+                    print(my_dict.values())<br>
+                    # ['Jack', 21, 'US']<br><br>
+
+                    # prints the key:value pairs as list<br>
+                    print(my_dict.items())<br>
+                    # [('name', 'Jack'), ('age', 21), ('country', 'US')]
+                </code>
+                <p>As you can see, dictionaries are very versatile, we can do a lot of different things with them, as well as turn them into lists and process them further.</p>
+                <p>The most common application of dictionaries is counting. This code by <a href="#reference">Dr. Chuck</a> counts the most common name in the list 'names', also known as a 'histogram' of names:</p>
+                <pre><code>counts = dict()
+names = ['Rob', 'John', 'Jason', 'John', 'Charles', 'Rob', 'James', 'John']
+for name in names:
+    if name not in counts:
+        counts[name] = 1
+    else:
+        counts[name] = counts[name] + 1
+print(counts)
+</code></pre>
+                <p>Explanation:</p>
+                <ul>
+                    <li>Create a blank dictionary called 'counts'.</li>
+                    <li>Create a list called 'names'.</li>
+                    <li>Loop through each name in 'names'.
+                        <ul>
+                            <li>If the name does not exist in the dictionary 'counts' already, add that name to it with a value of 1.</li>
+                            <li>Else (it exists) and increase its value by 1.</li>
+                        </ul>
+                    <li>Print the dictionary.</li>
+                </ul>
+                <p>There is a simpler way to do this names histogram with the get() method. I encourage you to do your own research and look into this further (<a href="https://www.youtube.com/watch?v=8DvywoWv6fI" target="_blank">Python for Everybody</a>).</p>
+
+            </section>
+
+            <section id="functions" class="main-section">
+                <header><h2>Functions</h2></header>
+                <p>A function or method is useful when you have multiple lines of code that you may use more than once and when the function is 'called' it executes those lines of code.</p>
+                <p>They are also great at processing and modifying information passed to them inside of the parenthesis () and returning the processed information.</p>
+                <p>We have been using functions for most of this introductory lesson:</p>
+                <ul>
+                    <li>the print() function, which prints or outputs the value(s) specified</li>
+                    <li>the append() function, which appends the value specified to the end of your list.</li>
+                    <li>the sum() function, which adds all of the values in the list together.</li>
+                    <li>the upper() and lower() functions, which adjust the string to either uppercase or lowercase.</li>
+                </ul>
+                <p>There are many more functions we will not get into here, but if you want to see what type() a variable is, type:</p>
+                <code>
+                    type(name_of_your_variable)
+                </code>
+                <p>To get a list of that variable type's capable functions, use the dir() function by typing:</p> 
+                <code>
+                    dir(name_of_your_variable)
+                </code>
+                <p>and you will see a list of that variable type's functions (ignore the ones with the underscores, as they are used by Python).</p>
+                <p>To define your own functions, you need to have a def (which defines it as a function) followed by the function name, followed by parentheses and a colon, as such:</p>
+                <pre><code>def hello_world():
+    print('Hello World!')</code></pre>
+                <p>You call this function by typing:</p>
+                <code>
+                    hello_world()
+                </code>
+                <p>You aren't required to pass data into the function through the parenthesis, as above. However, most of the time you will want to write functions in order to process data:</p>
+                <pre><code>a = 5<br>
+def multiply_by_five(a):
+    x = a * 5
+    return x<br>
+multiply_by_five(a)</code></pre>
+                <p>The above function will multiply anything passed to it (in the parenthesis) by five and return the result.  In this case you pass in a with a value of 5 when the function is called and get a result of 25.</p>
+                <p>This was a simple example but you can see how this will be useful with more complicated equations or something you need to repeat throughout your program.</p>
+                <p>Let's try another one:</p>
+                <pre><code>a = 44<br>b = 11
+def add_these(a, b):
+    return a + b</code></pre>
+                <p>Now we're taking two numbers and adding them together.  Simple, yes, but we can get much more complicated than this. Here is an example from one of my projects I'm working on, Numerology. This is still relatively simple but it will hopefully give you an idea that so much more can be done in Python. This function of the Numerology script changes letters into their respective numbers and reduces them if they are not master numbers:</p>
+                <pre><code>def name_num(name):
+    x = 0
+    total = 0
+    r = 0
+    for chars in name:
+        x = ord(chars) - 96
+        if x >= 10:
+            r = sum(int(digit) for digit in str(x))
+            total = total + r
+        else:
+            total = total + x
+    return total</code></pre>
+                <p>A more detailed explanation: This function takes a name passed into it, changes each letter to its numerological value (using the ord() function). For each digit in the string, if that number is greater than or equal to 10, it reduces it down to one digit and adds it to a total, otherwise it is already one digit and doesn't need to be reduced and adds it to the total.</p>
+
+                <p>That completes some of the basics and this short introduction to Python. Hopefully this has been a good start for you in your journey learning Python. This should be enough for you to start writing your own basic scripts or programs.</p>
+                <p>Thank you for reading and I hope you check out the resources below to keep learning.</p>
+            </section>
+
+            <section id="reference" class="main-section">
+                <header><h2>Reference</h2></header>
+                <p>The information on this page comes from various sources from which I've learned, as well as from the Python Documentation.  There is a lot of other information and courses out there.  If you enjoyed this brief introduction I encourage you to check out additional sources.</p>
+                <p>Thank you to:
+                    <ul>
+                        <li>
+                            <a href="https://www.py4e.com/" target="_blank">Dr. Charles "Chuck" Severance</a>, Michigan University Professor
+                        </li>
+                        <ul>
+                            <i class="fab fa-youtube" target="_blank"></i>
+                            <a href="https://www.youtube.com/watch?v=8DvywoWv6fI" target="_blank">
+                                Python for Everybody
+                            </a>
+                        </ul>
+                        <li>Heath "
+                            <a href="https://academy.tcm-sec.com/" target="_blank">
+                            The Cyber Mentor</a>" Adams
+                        </li>
+                        <ul>
+                            <i class="fab fa-youtube"></i>
+                            <a href="https://youtube.com/c/thecybermentor" target="_blank">
+                                The Cyber Mentor
+                            </a>
+                        </ul>
+                        <li>
+                            <a href="https://davidbombal.com/" target="_blank">David Bombal
+                            </a>
+                        </li>
+                        <ul>
+                            <i class="fab fa-youtube"></i>
+                            <a href="https://www.youtube.com/channel/UCP7WmQ_U4GB3K51Od9QvM0w" target="_blank">
+                                David Bombal
+                            </a>
+                        </ul>
+                        <li>
+                            <a href="https://networkchuck.com/" target="_blank">Network Chuck</a>
+                        </li>
+                        <ul>
+                            <i class="fab fa-youtube"></i>
+                            <a href="https://www.youtube.com/c/networkchuck" target="_blank">
+                                Network Chuck
+                            </a>
+                        </ul>
+                        <li>and of course 
+                            <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp.org</a>
+                        </li>
+                        <ul>
+                            <i class="fab fa-youtube"></i>
+                            <a href="https://www.youtube.com/c/Freecodecamp" target="_blank">
+                                freeCodeCamp
+                            </a>
+                        </ul>
+                    </ul>
+                </p>
+                <p>Please refer to the official <a href="https://docs.python.org/" target="_blank">Python Documentation</a>, <a href="https://docs.python.org/3/faq/" target="_blank">FAQ</a> or one of the above mentioned sources for more information.</p>
+                <p>Now, go write some Python programs!</p>
+            </section>
+            <footer>
+                    <p>Created by <a href="https://github.com/rpriven" target="_blank">@rpriven</a> as a <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp.org</a> responsive web design certification project</p>
+                    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" href="https://www.freecodecamp.org/" alt="freeCodeCamp logo">
+            </footer>
+        </main>
+
+    </div>
+</body>
+</html>
