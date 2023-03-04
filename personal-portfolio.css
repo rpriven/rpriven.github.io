@@ -183,6 +183,7 @@ a {
 #navbar a {
     color: var(--NewSteel);
     text-decoration: none;
+    letter-spacing: 0.475px;
 }
 #navbar ul li a::before {
     content: '';
@@ -190,6 +191,7 @@ a {
 #navbar a:hover {
     color: var(--NewSteel);
     font-weight: 900;
+    letter-spacing: 0;
     animation: navhov .25s ease-in-out 0s forwards;
 }
 @keyframes navhov {
